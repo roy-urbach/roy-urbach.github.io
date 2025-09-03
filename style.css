@@ -67,6 +67,7 @@ body {
     gap: 30px;
 }
 
+/* Modified .repo-card for flexbox */
 .repo-card {
     background: #f9f9f9;
     padding: 20px;
@@ -74,6 +75,9 @@ body {
     border: 1px solid #e1e4e8;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space, pushing button to bottom */
 }
 
 .repo-card:hover {
@@ -99,17 +103,19 @@ body {
     font-size: 1em;
     line-height: 1.6;
     color: #555;
+    flex-grow: 1; /* Allow description to take up available space */
 }
 
 .repo-link {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 15px; /* Keep some margin above the button */
     padding: 10px 15px;
     background-color: #238636;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    align-self: flex-start; /* Align the button to the start of its flex container */
 }
 
 .repo-link:hover {
