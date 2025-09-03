@@ -10,23 +10,32 @@ body {
     background: #0d1117;
     color: #fff;
     padding: 60px 20px;
-    text-align: center;
     border-bottom: 5px solid #238636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .profile-info {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .profile-pic {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px; /* Reduced size for better layout */
+    height: 100px; /* Reduced size for better layout */
     border: 5px solid #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .profile-text h1 {
@@ -41,24 +50,82 @@ body {
     font-weight: 300;
 }
 
+.social-links {
+    font-size: 2em; /* Bigger icons for visibility */
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #238636;
+}
+
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
 }
 
-.repos-section {
+.repos-section, .publications-section {
     background: #fff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-.repos-section h2 {
+.repos-section h2, .publications-section h2 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 30px;
     color: #0d1117;
+}
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #238636;
+    border-radius: 8px;
+}
+
+.publication-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+}
+
+.publication-authors {
+    font-style: italic;
+    color: #555;
+    margin: 0;
+}
+
+.publication-status {
+    font-size: 0.9em;
+    color: #777;
+    margin: 5px 0 0;
+}
+
+.publication-status a {
+    color: #238636;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.publication-status a:hover {
+    text-decoration: underline;
 }
 
 .repo-grid {
@@ -67,7 +134,6 @@ body {
     gap: 30px;
 }
 
-/* Modified .repo-card for flexbox */
 .repo-card {
     background: #f9f9f9;
     padding: 20px;
@@ -75,9 +141,9 @@ body {
     border: 1px solid #e1e4e8;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex; /* Make it a flex container */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: space-between; /* Distribute space, pushing button to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .repo-card:hover {
@@ -103,19 +169,19 @@ body {
     font-size: 1em;
     line-height: 1.6;
     color: #555;
-    flex-grow: 1; /* Allow description to take up available space */
+    flex-grow: 1;
 }
 
 .repo-link {
     display: inline-block;
-    margin-top: 15px; /* Keep some margin above the button */
+    margin-top: 15px;
     padding: 10px 15px;
     background-color: #238636;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    align-self: flex-start; /* Align the button to the start of its flex container */
+    align-self: flex-start;
 }
 
 .repo-link:hover {
